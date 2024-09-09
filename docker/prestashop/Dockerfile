@@ -9,5 +9,5 @@ RUN groupmod -g 1000 www-data
 # Cambia la propiedad del directorio /var/www y subdirectorios
 RUN chown -R www-data:www-data /var/www
 
-# Configura los permisos adecuados
-RUN chmod -R 755 /var/www/var/cache
+# Crea el directorio cache y configura los permisos
+RUN mkdir -p /var/www/var/cache && chmod -R 755 /var/www/var/cache
