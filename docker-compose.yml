@@ -1,14 +1,8 @@
-version: '2'
-
 services: 
   prestashop:
     build: ./docker/prestashop
     ports:
       - 80:80
-    links:
-      - mariadb:mariadb
-    depends_on:
-      - mariadb
     volumes:
       - ./docker/common:/scripts
       - ./src:/var/www/html
