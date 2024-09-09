@@ -9,9 +9,7 @@ services:
       - ./src/themes:/var/www/html/themes
       - ./src/override:/var/www/html/override
     environment:
-      DB_SERVER: some-mysql
-      DB_NAME: prestashop
-      DB_USER: root
-      DB_PASSWD: admin
+      PS_INSTALL_AUTO: 0
+      PS_DEV_MODE: 1
     ports:
       - "80:80"
